@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "URLSnap",
+    "description": "Instantly copy tab URL with CMD+Shift+C / Ctrl+Shift+C",
+    "version": "0.1",
+    "permissions": [
+        "tabs",
+        "clipboardWrite",
+        "notifications",
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "commands": {
+        "copy-url": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+C",
+                "mac": "Command+Shift+C"
+            },
+            "description": "Copy current tab URL"
+        }
+    },
+    "icons": {
+        "48": "icon48.png"
+    }
+}
